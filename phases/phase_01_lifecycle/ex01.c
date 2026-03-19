@@ -19,7 +19,7 @@
 //
 // The return type is void * so the thread can pass a value
 // back to whoever calls pthread_join(). We return NULL here.
-void *thread_func(void *arg)
+static void *thread_func(void *arg)
 {
     // arg is whatever pointer we passed to pthread_create.
     // We cast it back to the type we know it is.
