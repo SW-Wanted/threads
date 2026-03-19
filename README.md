@@ -35,17 +35,24 @@ sudo apt install build-essential valgrind
 ```bash
 git clone https://github.com/SW-Wanted/threads
 cd threads
-
-make            # compile every exercise in every phase
-make phase=01   # compile only phase 01
-make clean      # remove all compiled binaries
 ```
+
+| Command | What it does |
+|---------|-------------|
+| `make` | Compile every exercise across all phases |
+| `make phase=01` | Compile only the exercises in phase 01 |
+| `make run ex=phases/phase_01_lifecycle/ex01` | Compile and immediately run one exercise |
+| `make clean` | Remove all compiled binaries |
+| `make list` | Print all phases and their exercise files |
 
 To compile and run a single exercise manually:
 ```bash
-cc -Wall -Wextra -g -fsanitize=thread phases/phase_01_lifecycle/ex01.c -lpthread -o ex01
+cc -Wall -Wextra -Werror -g -fsanitize=thread phases/phase_01_lifecycle/ex01.c -lpthread -o ex01
 ./ex01
 ```
+
+> **Note:** `-fsanitize=thread` detects data races at runtime automatically.
+> Do not use it together with `valgrind` — compile without the flag for Helgrind/DRD runs.
 
 ---
 
