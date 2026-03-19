@@ -86,9 +86,6 @@ danger lies.
 | Communication | IPC (pipes, sockets, shared mem) | Direct (shared variables) |
 | Isolation | Crash doesn't affect others | Crash kills the whole process |
 
-For the Dining Philosophers problem (Phase 09) and most concurrency problems
-in systems programming, threads are the right tool.
-
 ---
 
 ## No new commands in this phase
