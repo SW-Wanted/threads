@@ -22,6 +22,8 @@ static volatile int     thread_ready = 0;
 // This thread holds the mutex when the main thread calls fork().
 static void *holder(void *arg)
 {
+    (void)arg;
+    
     pthread_mutex_lock(&mtx);
     printf("[holder] locked mutex\n");
     thread_ready = 1;

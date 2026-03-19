@@ -33,6 +33,8 @@ static int count = 0;
 
 static void *increment(void *arg)
 {
+    (void)arg;
+    
     int i = 0;
 
     while (i < LOOPS)

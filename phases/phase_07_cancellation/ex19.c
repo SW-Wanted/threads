@@ -17,6 +17,8 @@
 
 static void *looping_thread(void *arg)
 {
+    (void)arg;
+    
     int j = 1;
 
     printf("[thread] started\n");

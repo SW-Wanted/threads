@@ -52,6 +52,8 @@ static void *consumer(void *arg)
 
 static void *producer(void *arg)
 {
+    (void)arg;
+    
     // Wait a moment to let all consumers reach pthread_cond_wait.
     sleep(1);
 

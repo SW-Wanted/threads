@@ -21,6 +21,8 @@
 
 static void *self_detach(void *arg)
 {
+
+    (void)arg;
     // A thread can detach itself using pthread_self().
     // After this call, no other thread should call pthread_join() on it.
     pthread_detach(pthread_self());
@@ -37,6 +39,8 @@ static void *self_detach(void *arg)
 
 static void *attr_detach(void *arg)
 {
+    (void)arg;
+    
     printf("[attr_detach] running, id = %lu\n", (unsigned long)pthread_self());
     sleep(1);
     printf("[attr_detach] done\n");

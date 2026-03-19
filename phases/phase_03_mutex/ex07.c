@@ -33,6 +33,8 @@ static pthread_mutex_t  mtx = PTHREAD_MUTEX_INITIALIZER;
 
 static void *increment(void *arg)
 {
+    (void)arg;
+    
     int i = 0;
 
     while (i < LOOPS)

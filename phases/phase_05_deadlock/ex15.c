@@ -40,6 +40,8 @@ static void lock_both(pthread_mutex_t *first, pthread_mutex_t *second,
 
 static void *thread_a(void *arg)
 {
+    (void)arg;
+
     lock_both(&m1, &m2, "A");
     printf("[A] holds both locks\n");
     sleep(1);
@@ -51,6 +53,8 @@ static void *thread_a(void *arg)
 
 static void *thread_b(void *arg)
 {
+    (void)arg;
+    
     // Thread B tries in the opposite order — the pattern that caused
     // deadlock in ex13. But now trylock breaks the hold-and-wait.
     lock_both(&m2, &m1, "B");

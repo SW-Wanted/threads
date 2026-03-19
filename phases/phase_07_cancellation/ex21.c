@@ -29,6 +29,8 @@ static void release_mutex(void *arg)
 
 static void *worker(void *arg)
 {
+    (void)arg;
+
     pthread_mutex_lock(&mtx);
     printf("[thread] locked mutex\n");
 
@@ -48,6 +50,8 @@ static void *worker(void *arg)
 
 static void *waiter(void *arg)
 {
+    (void)arg;
+    
     // This thread tries to acquire the same mutex.
     // Without the cleanup handler, it would wait forever after the
     // worker is cancelled.

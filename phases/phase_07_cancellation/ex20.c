@@ -19,6 +19,8 @@ static int  data_b = 0;
 
 static void *worker(void *arg)
 {
+    (void)arg;
+    
     int i = 0;
 
     while (i < 10)

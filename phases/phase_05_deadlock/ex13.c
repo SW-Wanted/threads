@@ -20,6 +20,8 @@ static pthread_mutex_t m2 = PTHREAD_MUTEX_INITIALIZER;
 
 static void *thread_a(void *arg)
 {
+    (void)arg;
+
     printf("[A] locking m1\n");
     pthread_mutex_lock(&m1);
     printf("[A] locked m1, sleeping 1s\n");
@@ -34,6 +36,8 @@ static void *thread_a(void *arg)
 
 static void *thread_b(void *arg)
 {
+    (void)arg;
+    
     printf("[B] locking m2\n");
     pthread_mutex_lock(&m2);
     printf("[B] locked m2, sleeping 1s\n");

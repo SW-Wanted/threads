@@ -20,6 +20,8 @@ static pthread_cond_t   cond = PTHREAD_COND_INITIALIZER;
 
 static void *producer(void *arg)
 {
+    (void)arg;
+    
     int i = 0;
     while (i < 5)
     {
@@ -42,6 +44,8 @@ static void *producer(void *arg)
 
 static void *consumer(void *arg)
 {
+    (void)arg;
+
     int consumed = 0;
     while (consumed < 5)
     {
