@@ -121,7 +121,7 @@ A thread finishes when any of the following happens:
 
 - Its `start_routine` returns
 - It calls `pthread_exit()`
-- It is cancelled by another thread (see Phase 07)
+- It is cancelled by another thread (see [Phase 07](../phase_07_cancellation/))
 - Any thread calls `exit()` — which terminates the entire process immediately
 
 `pthread_exit()` is equivalent to returning from `start_routine`, with one
