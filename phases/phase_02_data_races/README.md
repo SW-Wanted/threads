@@ -129,3 +129,5 @@ WARNING: ThreadSanitizer: data race (pid=12345)
 The solution to data races is **mutual exclusion**: ensuring that only one thread
 at a time can access the shared variable. That is the job of a **mutex**, which
 is the topic of Phase 03.
+
+When you are ready, continue to [Phase 03 — Mutex](../phase_03_mutex/).

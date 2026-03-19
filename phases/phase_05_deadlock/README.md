@@ -128,3 +128,5 @@ valgrind --tool=helgrind ./ex13
 ```
 
 Compare with `ex14.c` — identical structure, only the lock order changed.
+
+When you are ready, continue to [Phase 06 — Thread Safety](../phase_06_thread_safety/).

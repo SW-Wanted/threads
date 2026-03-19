@@ -168,3 +168,5 @@ not guaranteed**. The OS scheduler decides when each thread runs. Run the
 program several times — the order may change. This non-determinism is a
 fundamental property of concurrent execution, and it is the root of all the
 problems you will encounter in the next phases.
+
+When you are ready, continue to [Phase 02 — Data Races](../phase_02_data_races/).

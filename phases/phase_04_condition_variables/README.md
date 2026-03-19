@@ -151,3 +151,5 @@ condition variable.
 Compare CPU usage between `ex10.c` and `ex11.c` using `top` or `htop` while
 they run. The busy-waiting version will consume near 100% of a CPU core.
 The condition variable version will show near 0% between production events.
+
+When you are ready, continue to [Phase 05 — Deadlock](../phase_05_deadlock/).

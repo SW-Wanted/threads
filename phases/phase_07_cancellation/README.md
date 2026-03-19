@@ -124,3 +124,5 @@ because it only triggers at well-defined points.
 | [ex19.c](ex19.c) | Cancel a looping thread with `pthread_cancel` |
 | [ex20.c](ex20.c) | `PTHREAD_CANCEL_DISABLE` protects a critical section |
 | [ex21.c](ex21.c) | Cleanup handler unlocks a mutex on cancellation |
+
+When you are ready, continue to [Phase 08 — Advanced](../phase_08_advanced/).

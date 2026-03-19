@@ -107,3 +107,5 @@ void my_library_function(void)
 | [ex16.c](ex16.c) | A non-thread-safe function and the bug it causes |
 | [ex17.c](ex17.c) | Fixed with `__thread` (thread-local storage) |
 | [ex18.c](ex18.c) | Fixed with thread-specific data and `pthread_once` |
+
+When you are ready, continue to [Phase 07 — Cancellation](../phase_07_cancellation/).

@@ -162,3 +162,5 @@ In `ex07.c`, run the corrected program multiple times. The result is always
 noticeably slower. This is the **cost of synchronisation**.
 
 The goal is to protect exactly what needs protecting — no more, no less.
+
+When you are ready, continue to [Phase 04 — Condition variables](../phase_04_condition_variables/).
