@@ -80,9 +80,7 @@ By default, a thread is **joinable**. This means another thread can call
 int pthread_join(pthread_t thread, void **retval);
 ```
 
-If you create a thread and never join it (and never detach it), its resources
-are not freed when it finishes. This is a **thread resource leak** — similar
-to a zombie process.
+If you create a thread and never join it (and never detach it), the program may terminate without the thread having executed yet, and its resources will not be released when it finishes. This is a **thread resource leak** — similar to a zombie process.
 
 **Rule:** every joinable thread must eventually be either joined or detached.
 
