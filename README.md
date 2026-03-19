@@ -22,9 +22,11 @@ The content is based on the threads chapters of
 | `gcc` or `cc` | Compiler |
 | `make` | Build system |
 | `valgrind` | Detect races and deadlocks |
-| Linux | POSIX threads (`-lpthread`) |
+| Linux or WSL | POSIX threads (`-lpthread`) |
 
+### Install prerequisites
 ```bash
+sudo apt update
 sudo apt install build-essential valgrind
 ```
 
