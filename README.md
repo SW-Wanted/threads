@@ -69,7 +69,6 @@ cc -Wall -Wextra -Werror -g -fsanitize=thread phases/phase_01_lifecycle/ex01.c -
 | [06](phases/phase_06_thread_safety/) | Thread safety | Reentrancy, `pthread_once`, thread-specific data |
 | [07](phases/phase_07_cancellation/) | Cancellation | `pthread_cancel`, cleanup handlers, cancellation points |
 | [08](phases/phase_08_advanced/) | Advanced | Thread attributes, signals, `fork()` in threaded programs |
-| [09](phases/phase_09_mini_philo/) | Mini-philo | The Dining Philosophers — putting it all together |
 
 ---
 
