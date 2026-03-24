@@ -88,8 +88,7 @@ If you create a thread and never join it (and never detach it), the program may 
 
 ## Detaching a thread
 
-If you do not care about a thread's return value and don't want to call
-`pthread_join()`, you can detach it:
+If you do not care about a thread's return value and don't want to wait a thread to finish, you can detach it:
 
 ```c
 pthread_detach(pthread_self());   // thread detaches itself
