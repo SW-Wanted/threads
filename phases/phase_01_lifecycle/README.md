@@ -16,7 +16,7 @@ int pthread_create(pthread_t *thread, const pthread_attr_t *attr,
 // Wait for a thread to finish (join it)
 int pthread_join(pthread_t thread, void **retval);
 
-// Detach a thread (let the OS clean it up automatically)
+// Detach a thread (let the OS clean it up automatically 'if the thread terminates before the process') 
 int pthread_detach(pthread_t thread);
 
 // Get the calling thread's own ID
@@ -95,8 +95,9 @@ pthread_detach(pthread_self());   // thread detaches itself
 pthread_detach(tid);              // another thread detaches it
 ```
 
-Once detached, a thread cannot be joined. Its resources are freed automatically
-when it terminates.
+Once detached, a thread cannot be joined. Its resources are freed automatically when it terminates.
+
+> Warning: If the thread terminates before the process (the kernel will automatically release the resources), otherwise, that is, the process dies before the thread (the resources will be lost).
 
 A thread can also be created already detached using thread attributes:
 
@@ -121,12 +122,9 @@ A thread finishes when any of the following happens:
 - It is cancelled by another thread (see [Phase 07](../phase_07_cancellation/))
 - Any thread calls `exit()` — which terminates the entire process immediately
 
-`pthread_exit()` is equivalent to returning from `start_routine`, with one
-important difference: it can be called from *any* function in the call stack,
-not just the top-level thread function.
+`pthread_exit()` is equivalent to returning from `start_routine`, with one important difference: it can be called from *any* function in the call stack, not just the top-level thread function.
 
-If `main()` calls `pthread_exit()` instead of returning or calling `exit()`,
-the other threads continue to run until they finish.
+If `main()` calls `pthread_exit()` instead of returning or calling `exit()`, the other threads continue to run until they finish.
 
 ---
 
